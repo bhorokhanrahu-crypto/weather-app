@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <div class="container">
+
+            <header class="header">
+                <div class="brand">
+                    <div class="brand-icon">☁️</div>
+                    <div>
+                        <h1>Weatherly</h1>
+                        <p>Real-time weather updates</p>
+                    </div>
+                </div>
+
+                <button class="unit-btn" id="unitBtn">°C</button>
+            </header>
+
+            <section class="search-section">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        id="cityInput"
+                        placeholder="Search city..."
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn">Search</button>
+                </div>
+            </section>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching weather...</p>
+            </div>
+
+            <div id="error" class="error hidden">
+                <span>⚠️</span>
+                <p id="errorText">Something went wrong.</p>
+            </div>
+
+            <section id="weatherContent" class="weather-content hidden">
+
+                <div class="location">
+                    <span>📍</span>
+                    <div>
+                        <h2 id="cityName">Karachi</h2>
+                        <p id="countryName">Pakistan</p>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-left">
+                        <div id="weatherIcon" class="weather-icon">☀️</div>
+                        <div>
+                            <div class="temperature">
+                                <span id="temperature">28</span><sup>°C</sup>
+                            </div>
+                            <p id="condition">Clear Sky</p>
+                        </div>
+                    </div>
+
+                    <div class="feels">
+                        <span>Feels like</span>
+                        <strong id="feelsLike">30°C</strong>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon humidity">💧</div>
+                        <div>
+                            <span>Humidity</span>
+                            <strong id="humidity">--%</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon wind">💨</div>
+                        <div>
+                            <span>Wind Speed</span>
+                            <strong id="wind">-- km/h</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon pressure">◉</div>
+                        <div>
+                            <span>Pressure</span>
+                            <strong id="pressure">-- hPa</strong>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon visibility">👁</div>
+                        <div>
+                            <span>Visibility</span>
+                            <strong id="visibility">-- km</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sun-card">
+                    <div class="sun-item">
+                        <div class="sun-icon">🌅</div>
+                        <div>
+                            <span>Sunrise</span>
+                            <strong id="sunrise">--:--</strong>
+                        </div>
+                    </div>
+
+                    <div class="sun-line"></div>
+
+                    <div class="sun-item">
+                        <div class="sun-icon">🌇</div>
+                        <div>
+                            <span>Sunset</span>
+                            <strong id="sunset">--:--</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>Weather data by Open-Meteo</p>
+                </footer>
+
+            </section>
+
+            <section id="welcome" class="welcome">
+                <div class="welcome-icon">🌤️</div>
+                <h2>Check the weather</h2>
+                <p>Search for any city to see current weather conditions.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
